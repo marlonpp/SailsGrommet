@@ -7,7 +7,7 @@ a [Sails](http://sailsjs.org) application integrated with the [UX Framework Grom
 ```sails lift --verbose```
 
 This will lift your Sails application, bundle your assets (js, jsx, and scss) using Webpack and will lift a webpack-dev-server with hot reload capabilities. A new window will automatically open in your browser on http://localhost:9000/webpack-dev-server/, and all backend calls will be proxied to the Sails server on http://localhost:1337
-Ps.: I used the --verbose option to be able to see what's happening during the bundle and hot reload proccess.
+Ps.: I used the --verbose option to be able to see what's happening during the bundle and hot reload process.
 
 **To run in production mode use:** 
 ```sails lift --prod```
