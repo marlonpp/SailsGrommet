@@ -1,11 +1,22 @@
 // (C) Copyright 2014-2015 Hewlett-Packard Development Company, L.P.
 require('../scss/index.scss');
 
-var React = require('react');
-var ReactDOM = require('react-dom');
-var TodoApp = require('./TodoApp');
+import React from 'react';
+import { render } from 'react-dom';
+import { Provider } from 'react-redux';
+import configureStore from './store/configureStore';
+import CloudMaster from './containers/CloudMaster';
 
-var element = document.getElementById('content');
-ReactDOM.render(React.createElement(TodoApp), element);
+const store = configureStore();
+
+// Log the initial state
+console.log('Initial State:',store.getState());
+
+render(
+  <Provider store={store}>
+    <CloudMaster />
+  </Provider>,
+  document.getElementById('content')
+);
 
 document.body.classList.remove('loading');
