@@ -7,7 +7,7 @@
  */
 
 var path = require('path');
-var devGulpTasks = require('grommet/utils/gulp/gulp-tasks');
+var devGulpTasks = require('grommet-toolbox').default;
 
 module.exports = function(gulp, plugins, growl) {
   gulp.task('grommet:dist', function() {
